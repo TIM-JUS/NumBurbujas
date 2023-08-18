@@ -16,6 +16,11 @@ public class OrdenNum {
         System.out.println("==BIENVENIDO A MI PROGRAMA \nNUMEROS BURBUJAS===");
         Scanner scanner =new Scanner(System.in);
         int[] arreglo = new int[5];
+        
+        for (int i = 0; i < arreglo.length; i++) {
+            System.out.print("INGRESE EL NUMERO " + (i + 1) + ": ");
+            arreglo[i] = scanner.nextInt();
+        }
 
     }
 }
