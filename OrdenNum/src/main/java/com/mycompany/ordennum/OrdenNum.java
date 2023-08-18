@@ -21,6 +21,20 @@ public class OrdenNum {
             System.out.print("INGRESE EL NUMERO " + (i + 1) + ": ");
             arreglo[i] = scanner.nextInt();
         }
-
+    scanner.close();
+        System.out.print("\nLOS NUMEROS SON: ");
+        for (int num : arreglo) System.out.print(num + " ");
+        System.out.println();
+        
+        for (int i = 0; i < arreglo.length - 1; i++)
+            for (int j = 0; j < arreglo.length - i - 1; j++)
+                if (arreglo[j] > arreglo[j + 1]) {
+                    int temp = arreglo[j];
+                    arreglo[j] = arreglo[j + 1];
+                    arreglo[j + 1] = temp;
+                }
+        System.out.print("\nLOS NUEVOS NUMEOS SON: ");
+        for (int num : arreglo) System.out.print(num + " ");
+        System.out.println();
     }
 }
